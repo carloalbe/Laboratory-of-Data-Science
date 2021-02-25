@@ -1,0 +1,2931 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="11/1/2020 10:58:50 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-IKAD7FQ"
+  DTS:CreatorName="DESKTOP-IKAD7FQ\GiamboSeller"
+  DTS:DTSID="{4B2E4373-8CED-43C1-B4F8-316E1A6209B7}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.132"
+  DTS:LocaleID="1040"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="31"
+  DTS:VersionGUID="{B07B9D76-1434-4EA3-BEFA-B7C6380E5ACE}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[apa.di.unipi.it.Group17HWMart.group17]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{01B5090C-3BD0-4843-9183-3333DCDA898E}"
+      DTS:ObjectName="apa.di.unipi.it.Group17HWMart.group17">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=apa.di.unipi.it;User ID=group17;Initial Catalog=Group17HWMart;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAMgcDzqEJLUC3pIwLCIp3QwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAA94lk0qt0TXiyIbvpYPVwDDgzNygNF6ezDVTHZSrq5ygAAAAAOgAAAAAIAACAAAAAMG3hNCRH8rYalzCEegOUzUEO6sLxqrHIUP5D8NJ9zLBAAAAA+PwXVUTS4NtWh72L2zC2bQAAAAEDL4BTMlXh5riZnyPNuDL7KdhvUDsENVFYTD26haNKrrV7ft9ApPInuhflmk7djoqQ192pI8vLhx0nbtpM8deo</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Gestione connessione file flat]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{59F10836-E6BB-4E38-A538-464EF2106470}"
+      DTS:ObjectName="Gestione connessione file flat">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\carlo\Desktop\Università\data science and business informatics\lab of ds\project\project 2\output2.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="continent"
+              DTS:DTSID="{348F1A58-F2FB-419A-BE89-BC53E5D8DC8C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="6"
+              DTS:TextQualified="True"
+              DTS:ObjectName="cpu_sales_usd"
+              DTS:DTSID="{5377F4E4-B2A1-4223-A78A-CE3A405A5834}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="6"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ram_sales_usd"
+              DTS:DTSID="{DEFB00DF-7E26-4FCF-818F-5A5524D6F1C6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="6"
+              DTS:TextQualified="True"
+              DTS:ObjectName="gpu_sales_usd"
+              DTS:DTSID="{362C2C44-DD32-410F-B86F-8B750414E25B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="3"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="top_sales"
+              DTS:DTSID="{BC8B7174-A0FC-44B1-BC9F-507163A2DBC7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="6"
+              DTS:TextQualified="True"
+              DTS:ObjectName="top_sales_usd"
+              DTS:DTSID="{93CEE3A7-3A1C-48D5-992B-0B6137C3C19A}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[group17.group17]"
+      DTS:CreationName="ODBC"
+      DTS:DTSID="{A7013F18-F782-4CCC-9F60-1FCD87CD3377}"
+      DTS:ObjectName="group17.group17">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="uid=group17;Dsn=group17;">
+          <DTS:Password
+            DTS:Name="pwd"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAMgcDzqEJLUC3pIwLCIp3QwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACGoalP7yIHGIS/ZHg3JeKmYeaoVtggrVCMpHVWNJUtJgAAAAAOgAAAAAIAACAAAACRGmn1+fq7wri+b7b190Xq3xGzW53KBy5gas2HzNkVyRAAAADabYv7BuPd9w/ZBPjBat4gQAAAAKy67aPlde1CsT1ceCekLz5muMHYkhwtsqxnrYTwycNqCWAOsNbcDqKpfPr7UUiStAXXVTTuOLkACWudqq5Xvww</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Attività Flusso di dati"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Attività Flusso di dati"
+      DTS:DTSID="{B0D10E18-3FC3-4039-A490-DD2D8B321DB1}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Attività Flusso di dati"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Attività Flusso di dati\Colonna derivata"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Colonna derivata;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;0"
+              description="Crea nuovi valori di colonna applicando espressioni alle colonne di input della trasformazione. Creare nuove colonne oppure sovrascrivere quelle esistenti. Ad esempio, concatenare i valori delle colonne 'first name' e 'last name' per creare una colonna 'full name'."
+              name="Colonna derivata"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Attività Flusso di dati\Colonna derivata.Inputs[Input colonna derivata]"
+                  description="Input della trasformazione Colonna derivata"
+                  name="Input colonna derivata">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Colonna derivata.Inputs[Input colonna derivata].Columns[cpu_sales_usd]"
+                      cachedDataType="cy"
+                      cachedName="cpu_sales_usd"
+                      lineageId="Package\Attività Flusso di dati\Merge join 1.Outputs[Output merge join].Columns[cpu_sales_usd]" />
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Colonna derivata.Inputs[Input colonna derivata].Columns[ram_sales_usd]"
+                      cachedDataType="cy"
+                      cachedName="ram_sales_usd"
+                      lineageId="Package\Attività Flusso di dati\Merge join 1.Outputs[Output merge join].Columns[ram_sales_usd]" />
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Colonna derivata.Inputs[Input colonna derivata].Columns[gpu_sales_usd]"
+                      cachedDataType="cy"
+                      cachedName="gpu_sales_usd"
+                      lineageId="Package\Attività Flusso di dati\Merge join 1.Outputs[Output merge join].Columns[gpu_sales_usd]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Attività Flusso di dati\Colonna derivata.Outputs[Output colonna derivata]"
+                  description="Output predefinito della trasformazione Colonna derivata"
+                  exclusionGroup="1"
+                  name="Output colonna derivata"
+                  synchronousInputId="Package\Attività Flusso di dati\Colonna derivata.Inputs[Input colonna derivata]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Colonna derivata.Outputs[Output colonna derivata].Columns[top_sales]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Calcolo"
+                      errorRowDisposition="FailComponent"
+                      length="3"
+                      lineageId="Package\Attività Flusso di dati\Colonna derivata.Outputs[Output colonna derivata].Columns[top_sales]"
+                      name="top_sales"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Espressione colonna derivata"
+                          name="Expression">(#{Package\Attività Flusso di dati\Merge join 1.Outputs[Output merge join].Columns[ram_sales_usd]} &gt; #{Package\Attività Flusso di dati\Merge join 1.Outputs[Output merge join].Columns[gpu_sales_usd]} &amp;&amp; #{Package\Attività Flusso di dati\Merge join 1.Outputs[Output merge join].Columns[ram_sales_usd]} &gt; #{Package\Attività Flusso di dati\Merge join 1.Outputs[Output merge join].Columns[cpu_sales_usd]}) ? "RAM" : (#{Package\Attività Flusso di dati\Merge join 1.Outputs[Output merge join].Columns[gpu_sales_usd]} &gt; #{Package\Attività Flusso di dati\Merge join 1.Outputs[Output merge join].Columns[cpu_sales_usd]}) ? "GPU" : "CPU"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Espressione descrittiva colonna derivata"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(ram_sales_usd &gt; gpu_sales_usd &amp;&amp; ram_sales_usd &gt; cpu_sales_usd) ? "RAM" : (gpu_sales_usd &gt; cpu_sales_usd) ? "GPU" : "CPU"</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Colonna derivata.Outputs[Output colonna derivata].Columns[top_sales_usd]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Calcolo"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Attività Flusso di dati\Colonna derivata.Outputs[Output colonna derivata].Columns[top_sales_usd]"
+                      name="top_sales_usd"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Espressione colonna derivata"
+                          name="Expression">(#{Package\Attività Flusso di dati\Merge join 1.Outputs[Output merge join].Columns[ram_sales_usd]} &gt; #{Package\Attività Flusso di dati\Merge join 1.Outputs[Output merge join].Columns[gpu_sales_usd]} &amp;&amp; #{Package\Attività Flusso di dati\Merge join 1.Outputs[Output merge join].Columns[ram_sales_usd]} &gt; #{Package\Attività Flusso di dati\Merge join 1.Outputs[Output merge join].Columns[cpu_sales_usd]}) ? #{Package\Attività Flusso di dati\Merge join 1.Outputs[Output merge join].Columns[ram_sales_usd]} : (#{Package\Attività Flusso di dati\Merge join 1.Outputs[Output merge join].Columns[gpu_sales_usd]} &gt; #{Package\Attività Flusso di dati\Merge join 1.Outputs[Output merge join].Columns[cpu_sales_usd]}) ? #{Package\Attività Flusso di dati\Merge join 1.Outputs[Output merge join].Columns[gpu_sales_usd]} : #{Package\Attività Flusso di dati\Merge join 1.Outputs[Output merge join].Columns[cpu_sales_usd]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Espressione descrittiva colonna derivata"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(ram_sales_usd &gt; gpu_sales_usd &amp;&amp; ram_sales_usd &gt; cpu_sales_usd) ? ram_sales_usd : (gpu_sales_usd &gt; cpu_sales_usd) ? gpu_sales_usd : cpu_sales_usd</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Attività Flusso di dati\Colonna derivata.Outputs[Output errori colonna derivata]"
+                  description="Output degli errori della trasformazione Colonna derivata"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Output errori colonna derivata"
+                  synchronousInputId="Package\Attività Flusso di dati\Colonna derivata.Inputs[Input colonna derivata]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Colonna derivata.Outputs[Output errori colonna derivata].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Attività Flusso di dati\Colonna derivata.Outputs[Output errori colonna derivata].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Colonna derivata.Outputs[Output errori colonna derivata].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Attività Flusso di dati\Colonna derivata.Outputs[Output errori colonna derivata].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Attività Flusso di dati\Cpu Sales"
+              componentClassID="Microsoft.SSISODBCSrc"
+              contactInfo="Origine ODBC;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;1"
+              description="Origine ODBC"
+              name="Cpu Sales"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Nome della tabella da recuperare."
+                  expressionType="Notify"
+                  name="TableName">"group17"."Cpu_sales"</property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL da eseguire."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specificare il numero di righe recuperate per batch."
+                  expressionType="Notify"
+                  name="BatchSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determina l'allocazione delle dimensioni del blocco per le colonne LOB"
+                  expressionType="Notify"
+                  name="LobChunkSize">32768</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determina come il componente espone le colonne CHAR. Se False, le colonne CHAR vengono esposte come stringhe multibyte (DT_STR). Se True, le colonne CHAR vengono esposte come stringhe &quot;wide&quot; (DT_WSTR)"
+                  expressionType="Notify"
+                  name="ExposeCharColumnsAsUnicode">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Numero di secondi da attendere per l'esecuzione di un'istruzione SQL prima di tornare all'applicazione."
+                  expressionType="Notify"
+                  name="StatementTimeout">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Tabella codici da usare quando le informazioni sulla tabella codici non sono disponibili dall'origine dati."
+                  expressionType="Notify"
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Int32"
+                  description="Metodo usato per il recupero dei dati."
+                  expressionType="Notify"
+                  name="FetchMethod">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Tipo di dati ODBC C per l'associazione dei dati numerici."
+                  expressionType="Notify"
+                  name="BindNumericAs">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determina come il componente deve associare le colonne di tipi di stringhe multibyte, ad esempio SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR. Le opzioni sono: Unicode (SQL_C_WCHAR) e ANSI (SQL_C_CHAR)."
+                  expressionType="Notify"
+                  name="BindCharColumnsAs">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Modalità usata per accedere al database."
+                  expressionType="Notify"
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Attività Flusso di dati\Cpu Sales.Connections[ODBCConnection]"
+                  connectionManagerID="Package.ConnectionManagers[group17.group17]"
+                  connectionManagerRefId="Package.ConnectionManagers[group17.group17]"
+                  description="Connessione di runtime ODBC usata per accedere al database."
+                  name="ODBCConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Attività Flusso di dati\Cpu Sales.Outputs[Output origine ODBC]"
+                  errorRowDisposition="IgnoreFailure"
+                  name="Output origine ODBC"
+                  truncationRowDisposition="FailComponent">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Cpu Sales.Outputs[Output origine ODBC].Columns[geo_code]"
+                      dataType="i4"
+                      externalMetadataColumnId="Package\Attività Flusso di dati\Cpu Sales.Outputs[Output origine ODBC].ExternalColumns[geo_code]"
+                      lineageId="Package\Attività Flusso di dati\Cpu Sales.Outputs[Output origine ODBC].Columns[geo_code]"
+                      name="geo_code" />
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Cpu Sales.Outputs[Output origine ODBC].Columns[sales_usd]"
+                      dataType="cy"
+                      externalMetadataColumnId="Package\Attività Flusso di dati\Cpu Sales.Outputs[Output origine ODBC].ExternalColumns[sales_usd]"
+                      lineageId="Package\Attività Flusso di dati\Cpu Sales.Outputs[Output origine ODBC].Columns[sales_usd]"
+                      name="sales_usd" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\Cpu Sales.Outputs[Output origine ODBC].ExternalColumns[time_code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      name="time_code" />
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\Cpu Sales.Outputs[Output origine ODBC].ExternalColumns[geo_code]"
+                      dataType="i4"
+                      name="geo_code" />
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\Cpu Sales.Outputs[Output origine ODBC].ExternalColumns[vendor_code]"
+                      dataType="i4"
+                      name="vendor_code" />
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\Cpu Sales.Outputs[Output origine ODBC].ExternalColumns[sales_usd]"
+                      dataType="cy"
+                      name="sales_usd" />
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\Cpu Sales.Outputs[Output origine ODBC].ExternalColumns[sales_currency]"
+                      dataType="cy"
+                      name="sales_currency" />
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\Cpu Sales.Outputs[Output origine ODBC].ExternalColumns[cpu_code]"
+                      dataType="i4"
+                      name="cpu_code" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Attività Flusso di dati\Cpu Sales.Outputs[Output errori origine ODBC]"
+                  isErrorOut="true"
+                  name="Output errori origine ODBC">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Cpu Sales.Outputs[Output errori origine ODBC].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Attività Flusso di dati\Cpu Sales.Outputs[Output errori origine ODBC].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Cpu Sales.Outputs[Output errori origine ODBC].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Attività Flusso di dati\Cpu Sales.Outputs[Output errori origine ODBC].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Cpu Sales.Outputs[Output errori origine ODBC].Columns[geo_code]"
+                      dataType="i4"
+                      lineageId="Package\Attività Flusso di dati\Cpu Sales.Outputs[Output errori origine ODBC].Columns[geo_code]"
+                      name="geo_code" />
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Cpu Sales.Outputs[Output errori origine ODBC].Columns[sales_usd]"
+                      dataType="cy"
+                      lineageId="Package\Attività Flusso di dati\Cpu Sales.Outputs[Output errori origine ODBC].Columns[sales_usd]"
+                      name="sales_usd" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Attività Flusso di dati\Destinazione file flat"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Destinazione file flat;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;1"
+              description="Destinazione file flat"
+              localeId="1033"
+              name="Destinazione file flat"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifica se i dati verranno sovrascritti o accodati nel file di destinazione."
+                  name="Overwrite">false</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifica il testo da scrivere nel file di destinazione prima della scrittura dei dati."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="Quando il qualificatore di testo è abilitato, specifica se il qualificatore di testo nei dati scritti nel file di destinazione verrà o meno preceduto da un carattere di escape."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Attività Flusso di dati\Destinazione file flat.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Gestione connessione file flat]"
+                  connectionManagerRefId="Package.ConnectionManagers[Gestione connessione file flat]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Attività Flusso di dati\Destinazione file flat.Inputs[Input destinazione file flat]"
+                  hasSideEffects="true"
+                  name="Input destinazione file flat">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Destinazione file flat.Inputs[Input destinazione file flat].Columns[continent]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="continent"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\Attività Flusso di dati\Destinazione file flat.Inputs[Input destinazione file flat].ExternalColumns[continent]"
+                      lineageId="Package\Attività Flusso di dati\Merge join 1.Outputs[Output merge join].Columns[continent]" />
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Destinazione file flat.Inputs[Input destinazione file flat].Columns[top_sales]"
+                      cachedDataType="wstr"
+                      cachedLength="3"
+                      cachedName="top_sales"
+                      externalMetadataColumnId="Package\Attività Flusso di dati\Destinazione file flat.Inputs[Input destinazione file flat].ExternalColumns[top_sales]"
+                      lineageId="Package\Attività Flusso di dati\Colonna derivata.Outputs[Output colonna derivata].Columns[top_sales]" />
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Destinazione file flat.Inputs[Input destinazione file flat].Columns[top_sales_usd]"
+                      cachedDataType="cy"
+                      cachedName="top_sales_usd"
+                      externalMetadataColumnId="Package\Attività Flusso di dati\Destinazione file flat.Inputs[Input destinazione file flat].ExternalColumns[top_sales_usd]"
+                      lineageId="Package\Attività Flusso di dati\Colonna derivata.Outputs[Output colonna derivata].Columns[top_sales_usd]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\Destinazione file flat.Inputs[Input destinazione file flat].ExternalColumns[continent]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="continent" />
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\Destinazione file flat.Inputs[Input destinazione file flat].ExternalColumns[top_sales]"
+                      dataType="wstr"
+                      length="3"
+                      name="top_sales" />
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\Destinazione file flat.Inputs[Input destinazione file flat].ExternalColumns[top_sales_usd]"
+                      dataType="cy"
+                      name="top_sales_usd" />
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\Destinazione file flat.Inputs[Input destinazione file flat].ExternalColumns[cpu_sales_usd]"
+                      dataType="cy"
+                      name="cpu_sales_usd" />
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\Destinazione file flat.Inputs[Input destinazione file flat].ExternalColumns[ram_sales_usd]"
+                      dataType="cy"
+                      name="ram_sales_usd" />
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\Destinazione file flat.Inputs[Input destinazione file flat].ExternalColumns[gpu_sales_usd]"
+                      dataType="cy"
+                      name="gpu_sales_usd" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Attività Flusso di dati\Gpu Sales"
+              componentClassID="Microsoft.SSISODBCSrc"
+              contactInfo="Origine ODBC;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;1"
+              description="Origine ODBC"
+              name="Gpu Sales"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Nome della tabella da recuperare."
+                  expressionType="Notify"
+                  name="TableName">"group17"."Gpu_sales"</property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL da eseguire."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specificare il numero di righe recuperate per batch."
+                  expressionType="Notify"
+                  name="BatchSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determina l'allocazione delle dimensioni del blocco per le colonne LOB"
+                  expressionType="Notify"
+                  name="LobChunkSize">32768</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determina come il componente espone le colonne CHAR. Se False, le colonne CHAR vengono esposte come stringhe multibyte (DT_STR). Se True, le colonne CHAR vengono esposte come stringhe &quot;wide&quot; (DT_WSTR)"
+                  expressionType="Notify"
+                  name="ExposeCharColumnsAsUnicode">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Numero di secondi da attendere per l'esecuzione di un'istruzione SQL prima di tornare all'applicazione."
+                  expressionType="Notify"
+                  name="StatementTimeout">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Tabella codici da usare quando le informazioni sulla tabella codici non sono disponibili dall'origine dati."
+                  expressionType="Notify"
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Int32"
+                  description="Metodo usato per il recupero dei dati."
+                  expressionType="Notify"
+                  name="FetchMethod">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Tipo di dati ODBC C per l'associazione dei dati numerici."
+                  expressionType="Notify"
+                  name="BindNumericAs">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determina come il componente deve associare le colonne di tipi di stringhe multibyte, ad esempio SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR. Le opzioni sono: Unicode (SQL_C_WCHAR) e ANSI (SQL_C_CHAR)."
+                  expressionType="Notify"
+                  name="BindCharColumnsAs">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Modalità usata per accedere al database."
+                  expressionType="Notify"
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Attività Flusso di dati\Gpu Sales.Connections[ODBCConnection]"
+                  connectionManagerID="Package.ConnectionManagers[group17.group17]"
+                  connectionManagerRefId="Package.ConnectionManagers[group17.group17]"
+                  description="Connessione di runtime ODBC usata per accedere al database."
+                  name="ODBCConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Attività Flusso di dati\Gpu Sales.Outputs[Output origine ODBC]"
+                  errorRowDisposition="IgnoreFailure"
+                  name="Output origine ODBC"
+                  truncationRowDisposition="FailComponent">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Gpu Sales.Outputs[Output origine ODBC].Columns[geo_code]"
+                      dataType="i4"
+                      externalMetadataColumnId="Package\Attività Flusso di dati\Gpu Sales.Outputs[Output origine ODBC].ExternalColumns[geo_code]"
+                      lineageId="Package\Attività Flusso di dati\Gpu Sales.Outputs[Output origine ODBC].Columns[geo_code]"
+                      name="geo_code" />
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Gpu Sales.Outputs[Output origine ODBC].Columns[sales_usd]"
+                      dataType="cy"
+                      externalMetadataColumnId="Package\Attività Flusso di dati\Gpu Sales.Outputs[Output origine ODBC].ExternalColumns[sales_usd]"
+                      lineageId="Package\Attività Flusso di dati\Gpu Sales.Outputs[Output origine ODBC].Columns[sales_usd]"
+                      name="sales_usd" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\Gpu Sales.Outputs[Output origine ODBC].ExternalColumns[gpu_code]"
+                      dataType="i2"
+                      name="gpu_code" />
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\Gpu Sales.Outputs[Output origine ODBC].ExternalColumns[time_code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      name="time_code" />
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\Gpu Sales.Outputs[Output origine ODBC].ExternalColumns[geo_code]"
+                      dataType="i4"
+                      name="geo_code" />
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\Gpu Sales.Outputs[Output origine ODBC].ExternalColumns[vendor_code]"
+                      dataType="i4"
+                      name="vendor_code" />
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\Gpu Sales.Outputs[Output origine ODBC].ExternalColumns[sales_usd]"
+                      dataType="cy"
+                      name="sales_usd" />
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\Gpu Sales.Outputs[Output origine ODBC].ExternalColumns[sales_currency]"
+                      dataType="cy"
+                      name="sales_currency" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Attività Flusso di dati\Gpu Sales.Outputs[Output errori origine ODBC]"
+                  isErrorOut="true"
+                  name="Output errori origine ODBC">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Gpu Sales.Outputs[Output errori origine ODBC].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Attività Flusso di dati\Gpu Sales.Outputs[Output errori origine ODBC].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Gpu Sales.Outputs[Output errori origine ODBC].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Attività Flusso di dati\Gpu Sales.Outputs[Output errori origine ODBC].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Gpu Sales.Outputs[Output errori origine ODBC].Columns[geo_code]"
+                      dataType="i4"
+                      lineageId="Package\Attività Flusso di dati\Gpu Sales.Outputs[Output errori origine ODBC].Columns[geo_code]"
+                      name="geo_code" />
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Gpu Sales.Outputs[Output errori origine ODBC].Columns[sales_usd]"
+                      dataType="cy"
+                      lineageId="Package\Attività Flusso di dati\Gpu Sales.Outputs[Output errori origine ODBC].Columns[sales_usd]"
+                      name="sales_usd" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Attività Flusso di dati\Join Geo"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Ricerca;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;6"
+              description="Crea un join delle colonne aggiuntive al flusso di dati cercando valori in una tabella. Ad esempio, creare un join della colonna 'employee id' alla tabella dei dipendenti per ottenere data di assunzione e nome del dipendente. Questa trasformazione è consigliata quando la memoria disponibile è sufficiente per la tabella di ricerca."
+              name="Join Geo"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifica l'istruzione SQL che genera la tabella di ricerca."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [group17].[Geography]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifica un'istruzione SQL che utilizza parametri per generare la tabella di ricerca."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [group17].[Geography]) [refTable]
+where [refTable].[geo_code] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il tipo di connessione utilizzata per accedere al set di dati di riferimento."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il tipo di cache della tabella di ricerca."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il modo in cui la trasformazione Ricerca gestisce le righe senza voci corrispondenti nel set di dati di riferimento."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la percentuale della cache allocata per le righe senza voci corrispondenti nel set di dati di riferimento."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Utilizzo massimo della memoria per la cache dei riferimenti in una piattaforma a 32 bit."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Utilizzo massimo della memoria per la cache dei riferimenti in una piattaforma a 64 bit."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indica se fare riferimento ai metadati in un formato XML."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="geo_code" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="continent" dataType="DT_STR" length="20" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="country" dataType="DT_STR" length="30" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="region" dataType="DT_STR" length="30" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="currency" dataType="DT_STR" length="3" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifica l'elenco di identificatori di derivazione corrispondenti ai parametri utilizzati dall'istruzione SQL nella proprietà SQLCommand. Le voci nell'elenco sono separate da punti e virgola."
+                  name="ParameterMap">#{Package\Attività Flusso di dati\Ram Sales.Outputs[Output origine ODBC].Columns[geo_code]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la tabella codici della colonna da utilizzare quando l'origine dati non rende disponibili informazioni sulla tabella codici."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determina se le chiavi duplicate nei dati di riferimento devono essere considerate come errori in caso di utilizzo della modalità di Full cache."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Attività Flusso di dati\Join Geo.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[apa.di.unipi.it.Group17HWMart.group17]"
+                  connectionManagerRefId="Package.ConnectionManagers[apa.di.unipi.it.Group17HWMart.group17]"
+                  description="Gestione connessione utilizzata per accedere ai dati di ricerca."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Attività Flusso di dati\Join Geo.Inputs[Input ricerca]"
+                  name="Input ricerca">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Join Geo.Inputs[Input ricerca].Columns[geo_code]"
+                      cachedDataType="i4"
+                      cachedName="geo_code"
+                      lineageId="Package\Attività Flusso di dati\Ram Sales.Outputs[Output origine ODBC].Columns[geo_code]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifica la colonna nella tabella di riferimento a cui viene unita in join una colonna."
+                          name="JoinToReferenceColumn">geo_code</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifica la colonna nella tabella di riferimento da cui viene copiata una colonna."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Attività Flusso di dati\Join Geo.Outputs[Output corrispondenza ricerca]"
+                  errorOrTruncationOperation="Ricerca"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Output corrispondenza ricerca"
+                  synchronousInputId="Package\Attività Flusso di dati\Join Geo.Inputs[Input ricerca]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Join Geo.Outputs[Output corrispondenza ricerca].Columns[continent]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copia colonna"
+                      length="20"
+                      lineageId="Package\Attività Flusso di dati\Join Geo.Outputs[Output corrispondenza ricerca].Columns[continent]"
+                      name="continent"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifica la colonna nella tabella di riferimento da cui viene copiata una colonna."
+                          name="CopyFromReferenceColumn">continent</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Attività Flusso di dati\Join Geo.Outputs[Output nessuna corrispondenza ricerca]"
+                  description="Output ricerca che gestisce le righe senza voci corrispondenti nel set di dati di riferimento. Usare questo output quando la proprietà NoMatchBehavior è impostata su &quot;Invia le righe senza voci corrispondenti all'output nessuna corrispondenza&quot;."
+                  exclusionGroup="1"
+                  name="Output nessuna corrispondenza ricerca"
+                  synchronousInputId="Package\Attività Flusso di dati\Join Geo.Inputs[Input ricerca]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Attività Flusso di dati\Join Geo.Outputs[Output errori ricerca]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Output errori ricerca"
+                  synchronousInputId="Package\Attività Flusso di dati\Join Geo.Inputs[Input ricerca]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Join Geo.Outputs[Output errori ricerca].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Attività Flusso di dati\Join Geo.Outputs[Output errori ricerca].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Join Geo.Outputs[Output errori ricerca].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Attività Flusso di dati\Join Geo.Outputs[Output errori ricerca].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Attività Flusso di dati\Join Geo 1"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Ricerca;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;6"
+              description="Crea un join delle colonne aggiuntive al flusso di dati cercando valori in una tabella. Ad esempio, creare un join della colonna 'employee id' alla tabella dei dipendenti per ottenere data di assunzione e nome del dipendente. Questa trasformazione è consigliata quando la memoria disponibile è sufficiente per la tabella di ricerca."
+              name="Join Geo 1"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifica l'istruzione SQL che genera la tabella di ricerca."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [group17].[Geography]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifica un'istruzione SQL che utilizza parametri per generare la tabella di ricerca."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [group17].[Geography]) [refTable]
+where [refTable].[geo_code] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il tipo di connessione utilizzata per accedere al set di dati di riferimento."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il tipo di cache della tabella di ricerca."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il modo in cui la trasformazione Ricerca gestisce le righe senza voci corrispondenti nel set di dati di riferimento."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la percentuale della cache allocata per le righe senza voci corrispondenti nel set di dati di riferimento."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Utilizzo massimo della memoria per la cache dei riferimenti in una piattaforma a 32 bit."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Utilizzo massimo della memoria per la cache dei riferimenti in una piattaforma a 64 bit."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indica se fare riferimento ai metadati in un formato XML."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="geo_code" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="continent" dataType="DT_STR" length="20" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="country" dataType="DT_STR" length="30" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="region" dataType="DT_STR" length="30" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="currency" dataType="DT_STR" length="3" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifica l'elenco di identificatori di derivazione corrispondenti ai parametri utilizzati dall'istruzione SQL nella proprietà SQLCommand. Le voci nell'elenco sono separate da punti e virgola."
+                  name="ParameterMap">#{Package\Attività Flusso di dati\Gpu Sales.Outputs[Output origine ODBC].Columns[geo_code]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la tabella codici della colonna da utilizzare quando l'origine dati non rende disponibili informazioni sulla tabella codici."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determina se le chiavi duplicate nei dati di riferimento devono essere considerate come errori in caso di utilizzo della modalità di Full cache."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Attività Flusso di dati\Join Geo 1.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[apa.di.unipi.it.Group17HWMart.group17]"
+                  connectionManagerRefId="Package.ConnectionManagers[apa.di.unipi.it.Group17HWMart.group17]"
+                  description="Gestione connessione utilizzata per accedere ai dati di ricerca."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Attività Flusso di dati\Join Geo 1.Inputs[Input ricerca]"
+                  name="Input ricerca">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Join Geo 1.Inputs[Input ricerca].Columns[geo_code]"
+                      cachedDataType="i4"
+                      cachedName="geo_code"
+                      lineageId="Package\Attività Flusso di dati\Gpu Sales.Outputs[Output origine ODBC].Columns[geo_code]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifica la colonna nella tabella di riferimento a cui viene unita in join una colonna."
+                          name="JoinToReferenceColumn">geo_code</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifica la colonna nella tabella di riferimento da cui viene copiata una colonna."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Attività Flusso di dati\Join Geo 1.Outputs[Output corrispondenza ricerca]"
+                  errorOrTruncationOperation="Ricerca"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Output corrispondenza ricerca"
+                  synchronousInputId="Package\Attività Flusso di dati\Join Geo 1.Inputs[Input ricerca]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Join Geo 1.Outputs[Output corrispondenza ricerca].Columns[continent]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copia colonna"
+                      length="20"
+                      lineageId="Package\Attività Flusso di dati\Join Geo 1.Outputs[Output corrispondenza ricerca].Columns[continent]"
+                      name="continent"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifica la colonna nella tabella di riferimento da cui viene copiata una colonna."
+                          name="CopyFromReferenceColumn">continent</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Attività Flusso di dati\Join Geo 1.Outputs[Output nessuna corrispondenza ricerca]"
+                  description="Output ricerca che gestisce le righe senza voci corrispondenti nel set di dati di riferimento. Usare questo output quando la proprietà NoMatchBehavior è impostata su &quot;Invia le righe senza voci corrispondenti all'output nessuna corrispondenza&quot;."
+                  exclusionGroup="1"
+                  name="Output nessuna corrispondenza ricerca"
+                  synchronousInputId="Package\Attività Flusso di dati\Join Geo 1.Inputs[Input ricerca]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Attività Flusso di dati\Join Geo 1.Outputs[Output errori ricerca]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Output errori ricerca"
+                  synchronousInputId="Package\Attività Flusso di dati\Join Geo 1.Inputs[Input ricerca]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Join Geo 1.Outputs[Output errori ricerca].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Attività Flusso di dati\Join Geo 1.Outputs[Output errori ricerca].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Join Geo 1.Outputs[Output errori ricerca].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Attività Flusso di dati\Join Geo 1.Outputs[Output errori ricerca].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Attività Flusso di dati\Join Geo 1 1"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Ricerca;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;6"
+              description="Crea un join delle colonne aggiuntive al flusso di dati cercando valori in una tabella. Ad esempio, creare un join della colonna 'employee id' alla tabella dei dipendenti per ottenere data di assunzione e nome del dipendente. Questa trasformazione è consigliata quando la memoria disponibile è sufficiente per la tabella di ricerca."
+              name="Join Geo 1 1"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifica l'istruzione SQL che genera la tabella di ricerca."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [group17].[Geography]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifica un'istruzione SQL che utilizza parametri per generare la tabella di ricerca."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [group17].[Geography]) [refTable]
+where [refTable].[geo_code] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il tipo di connessione utilizzata per accedere al set di dati di riferimento."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il tipo di cache della tabella di ricerca."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il modo in cui la trasformazione Ricerca gestisce le righe senza voci corrispondenti nel set di dati di riferimento."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la percentuale della cache allocata per le righe senza voci corrispondenti nel set di dati di riferimento."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Utilizzo massimo della memoria per la cache dei riferimenti in una piattaforma a 32 bit."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Utilizzo massimo della memoria per la cache dei riferimenti in una piattaforma a 64 bit."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indica se fare riferimento ai metadati in un formato XML."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="geo_code" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="continent" dataType="DT_STR" length="20" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="country" dataType="DT_STR" length="30" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="region" dataType="DT_STR" length="30" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="currency" dataType="DT_STR" length="3" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifica l'elenco di identificatori di derivazione corrispondenti ai parametri utilizzati dall'istruzione SQL nella proprietà SQLCommand. Le voci nell'elenco sono separate da punti e virgola."
+                  name="ParameterMap">#{Package\Attività Flusso di dati\Cpu Sales.Outputs[Output origine ODBC].Columns[geo_code]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la tabella codici della colonna da utilizzare quando l'origine dati non rende disponibili informazioni sulla tabella codici."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determina se le chiavi duplicate nei dati di riferimento devono essere considerate come errori in caso di utilizzo della modalità di Full cache."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Attività Flusso di dati\Join Geo 1 1.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[apa.di.unipi.it.Group17HWMart.group17]"
+                  connectionManagerRefId="Package.ConnectionManagers[apa.di.unipi.it.Group17HWMart.group17]"
+                  description="Gestione connessione utilizzata per accedere ai dati di ricerca."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Attività Flusso di dati\Join Geo 1 1.Inputs[Input ricerca]"
+                  name="Input ricerca">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Join Geo 1 1.Inputs[Input ricerca].Columns[geo_code]"
+                      cachedDataType="i4"
+                      cachedName="geo_code"
+                      lineageId="Package\Attività Flusso di dati\Cpu Sales.Outputs[Output origine ODBC].Columns[geo_code]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifica la colonna nella tabella di riferimento a cui viene unita in join una colonna."
+                          name="JoinToReferenceColumn">geo_code</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifica la colonna nella tabella di riferimento da cui viene copiata una colonna."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Attività Flusso di dati\Join Geo 1 1.Outputs[Output corrispondenza ricerca]"
+                  errorOrTruncationOperation="Ricerca"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Output corrispondenza ricerca"
+                  synchronousInputId="Package\Attività Flusso di dati\Join Geo 1 1.Inputs[Input ricerca]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Join Geo 1 1.Outputs[Output corrispondenza ricerca].Columns[continent]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copia colonna"
+                      length="20"
+                      lineageId="Package\Attività Flusso di dati\Join Geo 1 1.Outputs[Output corrispondenza ricerca].Columns[continent]"
+                      name="continent"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifica la colonna nella tabella di riferimento da cui viene copiata una colonna."
+                          name="CopyFromReferenceColumn">continent</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Attività Flusso di dati\Join Geo 1 1.Outputs[Output nessuna corrispondenza ricerca]"
+                  description="Output ricerca che gestisce le righe senza voci corrispondenti nel set di dati di riferimento. Usare questo output quando la proprietà NoMatchBehavior è impostata su &quot;Invia le righe senza voci corrispondenti all'output nessuna corrispondenza&quot;."
+                  exclusionGroup="1"
+                  name="Output nessuna corrispondenza ricerca"
+                  synchronousInputId="Package\Attività Flusso di dati\Join Geo 1 1.Inputs[Input ricerca]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Attività Flusso di dati\Join Geo 1 1.Outputs[Output errori ricerca]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Output errori ricerca"
+                  synchronousInputId="Package\Attività Flusso di dati\Join Geo 1 1.Inputs[Input ricerca]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Join Geo 1 1.Outputs[Output errori ricerca].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Attività Flusso di dati\Join Geo 1 1.Outputs[Output errori ricerca].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Join Geo 1 1.Outputs[Output errori ricerca].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Attività Flusso di dati\Join Geo 1 1.Outputs[Output errori ricerca].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Attività Flusso di dati\Merge join"
+              componentClassID="Microsoft.MergeJoin"
+              contactInfo="Merge join;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;1"
+              description="Combina due flussi di dati ordinati in uno solo tramite join di tipo FULL, LEFT o INNER. Questa trasformazione è consigliata quando i flussi di dati possono essere ordinati alle relative origini."
+              name="Merge join"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il tipo di join da eseguire."
+                  name="JoinType"
+                  typeConverter="JoinType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero di colonne nella chiave di ordinamento."
+                  name="NumKeyColumns">1</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica se i valori Null vengono considerati come valori uguali."
+                  name="TreatNullsAsEqual">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Indica il numero massimo di buffer richiesti per input prima dell'attivazione del blocco."
+                  name="MaxBuffersPerInput">5</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Attività Flusso di dati\Merge join.Inputs[Input merge join sinistro]"
+                  hasSideEffects="true"
+                  name="Input merge join sinistro">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Merge join.Inputs[Input merge join sinistro].Columns[continent]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="continent"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Attività Flusso di dati\Ordinamento.Outputs[Output ordinamento].Columns[continent]" />
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Merge join.Inputs[Input merge join sinistro].Columns[sales_usd]"
+                      cachedDataType="cy"
+                      cachedName="sales_usd"
+                      lineageId="Package\Attività Flusso di dati\Ordinamento.Outputs[Output ordinamento].Columns[sales_usd]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Attività Flusso di dati\Merge join.Inputs[Input merge join destro]"
+                  hasSideEffects="true"
+                  name="Input merge join destro">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Merge join.Inputs[Input merge join destro].Columns[continent]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="continent"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Attività Flusso di dati\Ordinamento 1.Outputs[Output ordinamento].Columns[continent]" />
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Merge join.Inputs[Input merge join destro].Columns[sales_usd]"
+                      cachedDataType="cy"
+                      cachedName="sales_usd"
+                      lineageId="Package\Attività Flusso di dati\Ordinamento 1.Outputs[Output ordinamento].Columns[sales_usd]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Attività Flusso di dati\Merge join.Outputs[Output merge join]"
+                  isSorted="true"
+                  name="Output merge join">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Merge join.Outputs[Output merge join].Columns[continent]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Attività Flusso di dati\Merge join.Outputs[Output merge join].Columns[continent]"
+                      name="continent"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonna di input associata a questa colonna di output"
+                          name="InputColumnID">#{Package\Attività Flusso di dati\Merge join.Inputs[Input merge join sinistro].Columns[continent]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Merge join.Outputs[Output merge join].Columns[gpu_sales_usd]"
+                      dataType="cy"
+                      lineageId="Package\Attività Flusso di dati\Merge join.Outputs[Output merge join].Columns[gpu_sales_usd]"
+                      name="gpu_sales_usd">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonna di input associata a questa colonna di output"
+                          name="InputColumnID">#{Package\Attività Flusso di dati\Merge join.Inputs[Input merge join destro].Columns[sales_usd]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Merge join.Outputs[Output merge join].Columns[ram_sales_usd]"
+                      dataType="cy"
+                      lineageId="Package\Attività Flusso di dati\Merge join.Outputs[Output merge join].Columns[ram_sales_usd]"
+                      name="ram_sales_usd">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonna di input associata a questa colonna di output"
+                          name="InputColumnID">#{Package\Attività Flusso di dati\Merge join.Inputs[Input merge join sinistro].Columns[sales_usd]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Attività Flusso di dati\Merge join 1"
+              componentClassID="Microsoft.MergeJoin"
+              contactInfo="Merge join;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;1"
+              description="Combina due flussi di dati ordinati in uno solo tramite join di tipo FULL, LEFT o INNER. Questa trasformazione è consigliata quando i flussi di dati possono essere ordinati alle relative origini."
+              name="Merge join 1"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il tipo di join da eseguire."
+                  name="JoinType"
+                  typeConverter="JoinType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero di colonne nella chiave di ordinamento."
+                  name="NumKeyColumns">1</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica se i valori Null vengono considerati come valori uguali."
+                  name="TreatNullsAsEqual">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Indica il numero massimo di buffer richiesti per input prima dell'attivazione del blocco."
+                  name="MaxBuffersPerInput">5</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Attività Flusso di dati\Merge join 1.Inputs[Input merge join sinistro]"
+                  hasSideEffects="true"
+                  name="Input merge join sinistro">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Merge join 1.Inputs[Input merge join sinistro].Columns[continent]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="continent"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Attività Flusso di dati\Merge join.Outputs[Output merge join].Columns[continent]" />
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Merge join 1.Inputs[Input merge join sinistro].Columns[ram_sales_usd]"
+                      cachedDataType="cy"
+                      cachedName="ram_sales_usd"
+                      lineageId="Package\Attività Flusso di dati\Merge join.Outputs[Output merge join].Columns[ram_sales_usd]" />
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Merge join 1.Inputs[Input merge join sinistro].Columns[gpu_sales_usd]"
+                      cachedDataType="cy"
+                      cachedName="gpu_sales_usd"
+                      lineageId="Package\Attività Flusso di dati\Merge join.Outputs[Output merge join].Columns[gpu_sales_usd]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Attività Flusso di dati\Merge join 1.Inputs[Input merge join destro]"
+                  hasSideEffects="true"
+                  name="Input merge join destro">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Merge join 1.Inputs[Input merge join destro].Columns[continent]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="continent"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Attività Flusso di dati\Ordinamento 2.Outputs[Output ordinamento].Columns[continent]" />
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Merge join 1.Inputs[Input merge join destro].Columns[sales_usd]"
+                      cachedDataType="cy"
+                      cachedName="sales_usd"
+                      lineageId="Package\Attività Flusso di dati\Ordinamento 2.Outputs[Output ordinamento].Columns[sales_usd]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Attività Flusso di dati\Merge join 1.Outputs[Output merge join]"
+                  isSorted="true"
+                  name="Output merge join">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Merge join 1.Outputs[Output merge join].Columns[continent]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Attività Flusso di dati\Merge join 1.Outputs[Output merge join].Columns[continent]"
+                      name="continent"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonna di input associata a questa colonna di output"
+                          name="InputColumnID">#{Package\Attività Flusso di dati\Merge join 1.Inputs[Input merge join sinistro].Columns[continent]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Merge join 1.Outputs[Output merge join].Columns[cpu_sales_usd]"
+                      dataType="cy"
+                      lineageId="Package\Attività Flusso di dati\Merge join 1.Outputs[Output merge join].Columns[cpu_sales_usd]"
+                      name="cpu_sales_usd">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonna di input associata a questa colonna di output"
+                          name="InputColumnID">#{Package\Attività Flusso di dati\Merge join 1.Inputs[Input merge join destro].Columns[sales_usd]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Merge join 1.Outputs[Output merge join].Columns[ram_sales_usd]"
+                      dataType="cy"
+                      lineageId="Package\Attività Flusso di dati\Merge join 1.Outputs[Output merge join].Columns[ram_sales_usd]"
+                      name="ram_sales_usd">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonna di input associata a questa colonna di output"
+                          name="InputColumnID">#{Package\Attività Flusso di dati\Merge join 1.Inputs[Input merge join sinistro].Columns[ram_sales_usd]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Merge join 1.Outputs[Output merge join].Columns[gpu_sales_usd]"
+                      dataType="cy"
+                      lineageId="Package\Attività Flusso di dati\Merge join 1.Outputs[Output merge join].Columns[gpu_sales_usd]"
+                      name="gpu_sales_usd">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonna di input associata a questa colonna di output"
+                          name="InputColumnID">#{Package\Attività Flusso di dati\Merge join 1.Inputs[Input merge join sinistro].Columns[gpu_sales_usd]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Attività Flusso di dati\Ordinamento"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Ordinamento;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;1"
+              description="Ordina i dati di input in ordine crescente o decrescente quando non possono essere ordinati come la relativa origine. Ad esempio, ordinare i dati delle vendite per 'customer id' prima che vengano scritti in un file flat e recapitati a un altro reparto. Nota: questa trasformazione non è consigliata per i flussi di dati di grandi dimensioni."
+              name="Ordinamento"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica se la trasformazione Ordinamento rimuove le righe con valori di ordinamento duplicati."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero massimo di thread da utilizzare per l'ordinamento."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Attività Flusso di dati\Ordinamento.Inputs[Input ordinamento]"
+                  name="Input ordinamento">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Ordinamento.Inputs[Input ordinamento].Columns[continent]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="continent"
+                      lineageId="Package\Attività Flusso di dati\Total Ram Sales in Each Continent.Outputs[Output aggregazione 1].Columns[continent]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Ordinamento.Inputs[Input ordinamento].Columns[sales_usd]"
+                      cachedDataType="cy"
+                      cachedName="sales_usd"
+                      lineageId="Package\Attività Flusso di dati\Total Ram Sales in Each Continent.Outputs[Output aggregazione 1].Columns[sales_usd]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Attività Flusso di dati\Ordinamento.Outputs[Output ordinamento]"
+                  isSorted="true"
+                  name="Output ordinamento">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Ordinamento.Outputs[Output ordinamento].Columns[continent]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Attività Flusso di dati\Ordinamento.Outputs[Output ordinamento].Columns[continent]"
+                      name="continent"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\Attività Flusso di dati\Total Ram Sales in Each Continent.Outputs[Output aggregazione 1].Columns[continent]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Ordinamento.Outputs[Output ordinamento].Columns[sales_usd]"
+                      dataType="cy"
+                      lineageId="Package\Attività Flusso di dati\Ordinamento.Outputs[Output ordinamento].Columns[sales_usd]"
+                      name="sales_usd">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\Attività Flusso di dati\Total Ram Sales in Each Continent.Outputs[Output aggregazione 1].Columns[sales_usd]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Attività Flusso di dati\Ordinamento 1"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Ordinamento;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;1"
+              description="Ordina i dati di input in ordine crescente o decrescente quando non possono essere ordinati come la relativa origine. Ad esempio, ordinare i dati delle vendite per 'customer id' prima che vengano scritti in un file flat e recapitati a un altro reparto. Nota: questa trasformazione non è consigliata per i flussi di dati di grandi dimensioni."
+              name="Ordinamento 1"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica se la trasformazione Ordinamento rimuove le righe con valori di ordinamento duplicati."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero massimo di thread da utilizzare per l'ordinamento."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Attività Flusso di dati\Ordinamento 1.Inputs[Input ordinamento]"
+                  name="Input ordinamento">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Ordinamento 1.Inputs[Input ordinamento].Columns[continent]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="continent"
+                      lineageId="Package\Attività Flusso di dati\Total Gpu Sales in Each Continent.Outputs[Output aggregazione 1].Columns[continent]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Ordinamento 1.Inputs[Input ordinamento].Columns[sales_usd]"
+                      cachedDataType="cy"
+                      cachedName="sales_usd"
+                      lineageId="Package\Attività Flusso di dati\Total Gpu Sales in Each Continent.Outputs[Output aggregazione 1].Columns[sales_usd]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Attività Flusso di dati\Ordinamento 1.Outputs[Output ordinamento]"
+                  isSorted="true"
+                  name="Output ordinamento">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Ordinamento 1.Outputs[Output ordinamento].Columns[continent]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Attività Flusso di dati\Ordinamento 1.Outputs[Output ordinamento].Columns[continent]"
+                      name="continent"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\Attività Flusso di dati\Total Gpu Sales in Each Continent.Outputs[Output aggregazione 1].Columns[continent]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Ordinamento 1.Outputs[Output ordinamento].Columns[sales_usd]"
+                      dataType="cy"
+                      lineageId="Package\Attività Flusso di dati\Ordinamento 1.Outputs[Output ordinamento].Columns[sales_usd]"
+                      name="sales_usd">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\Attività Flusso di dati\Total Gpu Sales in Each Continent.Outputs[Output aggregazione 1].Columns[sales_usd]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Attività Flusso di dati\Ordinamento 2"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Ordinamento;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;1"
+              description="Ordina i dati di input in ordine crescente o decrescente quando non possono essere ordinati come la relativa origine. Ad esempio, ordinare i dati delle vendite per 'customer id' prima che vengano scritti in un file flat e recapitati a un altro reparto. Nota: questa trasformazione non è consigliata per i flussi di dati di grandi dimensioni."
+              name="Ordinamento 2"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica se la trasformazione Ordinamento rimuove le righe con valori di ordinamento duplicati."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero massimo di thread da utilizzare per l'ordinamento."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Attività Flusso di dati\Ordinamento 2.Inputs[Input ordinamento]"
+                  name="Input ordinamento">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Ordinamento 2.Inputs[Input ordinamento].Columns[continent]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="continent"
+                      lineageId="Package\Attività Flusso di dati\Total Cpu Sales in Each Continent.Outputs[Output aggregazione 1].Columns[continent]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Ordinamento 2.Inputs[Input ordinamento].Columns[sales_usd]"
+                      cachedDataType="cy"
+                      cachedName="sales_usd"
+                      lineageId="Package\Attività Flusso di dati\Total Cpu Sales in Each Continent.Outputs[Output aggregazione 1].Columns[sales_usd]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Attività Flusso di dati\Ordinamento 2.Outputs[Output ordinamento]"
+                  isSorted="true"
+                  name="Output ordinamento">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Ordinamento 2.Outputs[Output ordinamento].Columns[continent]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Attività Flusso di dati\Ordinamento 2.Outputs[Output ordinamento].Columns[continent]"
+                      name="continent"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\Attività Flusso di dati\Total Cpu Sales in Each Continent.Outputs[Output aggregazione 1].Columns[continent]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Ordinamento 2.Outputs[Output ordinamento].Columns[sales_usd]"
+                      dataType="cy"
+                      lineageId="Package\Attività Flusso di dati\Ordinamento 2.Outputs[Output ordinamento].Columns[sales_usd]"
+                      name="sales_usd">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\Attività Flusso di dati\Total Cpu Sales in Each Continent.Outputs[Output aggregazione 1].Columns[sales_usd]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Attività Flusso di dati\Ram Sales"
+              componentClassID="Microsoft.SSISODBCSrc"
+              contactInfo="Origine ODBC;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;1"
+              description="Origine ODBC"
+              name="Ram Sales"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Nome della tabella da recuperare."
+                  expressionType="Notify"
+                  name="TableName">"group17"."Ram_sales"</property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL da eseguire."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specificare il numero di righe recuperate per batch."
+                  expressionType="Notify"
+                  name="BatchSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determina l'allocazione delle dimensioni del blocco per le colonne LOB"
+                  expressionType="Notify"
+                  name="LobChunkSize">32768</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determina come il componente espone le colonne CHAR. Se False, le colonne CHAR vengono esposte come stringhe multibyte (DT_STR). Se True, le colonne CHAR vengono esposte come stringhe &quot;wide&quot; (DT_WSTR)"
+                  expressionType="Notify"
+                  name="ExposeCharColumnsAsUnicode">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Numero di secondi da attendere per l'esecuzione di un'istruzione SQL prima di tornare all'applicazione."
+                  expressionType="Notify"
+                  name="StatementTimeout">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Tabella codici da usare quando le informazioni sulla tabella codici non sono disponibili dall'origine dati."
+                  expressionType="Notify"
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Int32"
+                  description="Metodo usato per il recupero dei dati."
+                  expressionType="Notify"
+                  name="FetchMethod">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Tipo di dati ODBC C per l'associazione dei dati numerici."
+                  expressionType="Notify"
+                  name="BindNumericAs">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determina come il componente deve associare le colonne di tipi di stringhe multibyte, ad esempio SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR. Le opzioni sono: Unicode (SQL_C_WCHAR) e ANSI (SQL_C_CHAR)."
+                  expressionType="Notify"
+                  name="BindCharColumnsAs">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Modalità usata per accedere al database."
+                  expressionType="Notify"
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Attività Flusso di dati\Ram Sales.Connections[ODBCConnection]"
+                  connectionManagerID="Package.ConnectionManagers[group17.group17]"
+                  connectionManagerRefId="Package.ConnectionManagers[group17.group17]"
+                  description="Connessione di runtime ODBC usata per accedere al database."
+                  name="ODBCConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Attività Flusso di dati\Ram Sales.Outputs[Output origine ODBC]"
+                  errorRowDisposition="IgnoreFailure"
+                  name="Output origine ODBC"
+                  truncationRowDisposition="FailComponent">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Ram Sales.Outputs[Output origine ODBC].Columns[geo_code]"
+                      dataType="i4"
+                      externalMetadataColumnId="Package\Attività Flusso di dati\Ram Sales.Outputs[Output origine ODBC].ExternalColumns[geo_code]"
+                      lineageId="Package\Attività Flusso di dati\Ram Sales.Outputs[Output origine ODBC].Columns[geo_code]"
+                      name="geo_code" />
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Ram Sales.Outputs[Output origine ODBC].Columns[sales_usd]"
+                      dataType="cy"
+                      externalMetadataColumnId="Package\Attività Flusso di dati\Ram Sales.Outputs[Output origine ODBC].ExternalColumns[sales_usd]"
+                      lineageId="Package\Attività Flusso di dati\Ram Sales.Outputs[Output origine ODBC].Columns[sales_usd]"
+                      name="sales_usd" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\Ram Sales.Outputs[Output origine ODBC].ExternalColumns[ram_code]"
+                      dataType="i4"
+                      name="ram_code" />
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\Ram Sales.Outputs[Output origine ODBC].ExternalColumns[time_code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      name="time_code" />
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\Ram Sales.Outputs[Output origine ODBC].ExternalColumns[geo_code]"
+                      dataType="i4"
+                      name="geo_code" />
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\Ram Sales.Outputs[Output origine ODBC].ExternalColumns[vendor_code]"
+                      dataType="i4"
+                      name="vendor_code" />
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\Ram Sales.Outputs[Output origine ODBC].ExternalColumns[sales_usd]"
+                      dataType="cy"
+                      name="sales_usd" />
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\Ram Sales.Outputs[Output origine ODBC].ExternalColumns[sales_currency]"
+                      dataType="cy"
+                      name="sales_currency" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Attività Flusso di dati\Ram Sales.Outputs[Output errori origine ODBC]"
+                  isErrorOut="true"
+                  name="Output errori origine ODBC">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Ram Sales.Outputs[Output errori origine ODBC].Columns[geo_code]"
+                      dataType="i4"
+                      externalMetadataColumnId="Package\Attività Flusso di dati\Ram Sales.Outputs[Output origine ODBC].ExternalColumns[geo_code]"
+                      lineageId="Package\Attività Flusso di dati\Ram Sales.Outputs[Output errori origine ODBC].Columns[geo_code]"
+                      name="geo_code" />
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Ram Sales.Outputs[Output errori origine ODBC].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Attività Flusso di dati\Ram Sales.Outputs[Output errori origine ODBC].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Ram Sales.Outputs[Output errori origine ODBC].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Attività Flusso di dati\Ram Sales.Outputs[Output errori origine ODBC].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Ram Sales.Outputs[Output errori origine ODBC].Columns[sales_usd]"
+                      dataType="cy"
+                      lineageId="Package\Attività Flusso di dati\Ram Sales.Outputs[Output errori origine ODBC].Columns[sales_usd]"
+                      name="sales_usd" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Attività Flusso di dati\Total Cpu Sales in Each Continent"
+              componentClassID="Microsoft.Aggregate"
+              contactInfo="Aggregazione;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;3"
+              description="Aggrega i dati con funzioni quali Media, Somma, Conta numeri, Max e Min. Ad esempio, raggruppare i dati per calcolare la somma delle vendite per prodotto o la media giornaliera delle visite."
+              name="Total Cpu Sales in Each Continent"
+              version="3">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero approssimativo di chiavi Group By generate dall'aggregazione. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica più di 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore KeyScale."
+                  name="KeyScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifica il numero esatto di chiavi Group By generate dall'aggregazione. Se si specifica un valore KeyScale, il valore di Keys ha la precedenza."
+                  name="Keys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero approssimativo di valori Distinct in una colonna a cui viene applicata la funzione di aggregazione Count Distinct. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore CountDistinctScale."
+                  name="CountDistinctScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifica il numero approssimativo di valori Distinct in una colonna a cui viene applicata la funzione di aggregazione Count Distinct. Se si specifica un valore CountDistinctScale, il valore in CountDistinctKeys ha la precedenza."
+                  name="CountDistinctKeys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la percentuale di estensione della memoria consentita durante l'aggregazione. I valori validi sono compresi tra 1 e 100."
+                  name="AutoExtendFactor">25</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Attività Flusso di dati\Total Cpu Sales in Each Continent.Inputs[Input aggregazione 1]"
+                  name="Input aggregazione 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Total Cpu Sales in Each Continent.Inputs[Input aggregazione 1].Columns[continent]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="continent"
+                      lineageId="Package\Attività Flusso di dati\Join Geo 1 1.Outputs[Output corrispondenza ricerca].Columns[continent]" />
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Total Cpu Sales in Each Continent.Inputs[Input aggregazione 1].Columns[sales_usd]"
+                      cachedDataType="cy"
+                      cachedName="sales_usd"
+                      lineageId="Package\Attività Flusso di dati\Cpu Sales.Outputs[Output origine ODBC].Columns[sales_usd]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Attività Flusso di dati\Total Cpu Sales in Each Continent.Outputs[Output aggregazione 1]"
+                  name="Output aggregazione 1">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifica il numero approssimativo di chiavi Group By generate dall'aggregazione. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica più di 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore KeyScale."
+                      name="KeyScale"
+                      typeConverter="KeyScaleType">0</property>
+                    <property
+                      dataType="System.Null"
+                      description="Specifica il numero esatto di chiavi Group By generate dall'aggregazione. Se si specifica un valore KeyScale, il valore di Keys ha la precedenza."
+                      name="Keys" />
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Total Cpu Sales in Each Continent.Outputs[Output aggregazione 1].Columns[continent]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Attività Flusso di dati\Total Cpu Sales in Each Continent.Outputs[Output aggregazione 1].Columns[continent]"
+                      name="continent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'ID della colonna di input utilizzata nell'aggregazione."
+                          name="AggregationColumnId">#{Package\Attività Flusso di dati\Join Geo 1 1.Outputs[Output corrispondenza ricerca].Columns[continent]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di aggregazione."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica se la colonna richieste interventi di gestione speciali perché contiene dati di dimensioni eccessive o richiede una precisione maggiore rispetto al tipo di dati float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni per il confronto di stringhe."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Total Cpu Sales in Each Continent.Outputs[Output aggregazione 1].Columns[sales_usd]"
+                      dataType="cy"
+                      lineageId="Package\Attività Flusso di dati\Total Cpu Sales in Each Continent.Outputs[Output aggregazione 1].Columns[sales_usd]"
+                      name="sales_usd">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'ID della colonna di input utilizzata nell'aggregazione."
+                          name="AggregationColumnId">#{Package\Attività Flusso di dati\Cpu Sales.Outputs[Output origine ODBC].Columns[sales_usd]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di aggregazione."
+                          name="AggregationType"
+                          typeConverter="AggregationType">4</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica se la colonna richieste interventi di gestione speciali perché contiene dati di dimensioni eccessive o richiede una precisione maggiore rispetto al tipo di dati float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni per il confronto di stringhe."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Attività Flusso di dati\Total Gpu Sales in Each Continent"
+              componentClassID="Microsoft.Aggregate"
+              contactInfo="Aggregazione;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;3"
+              description="Aggrega i dati con funzioni quali Media, Somma, Conta numeri, Max e Min. Ad esempio, raggruppare i dati per calcolare la somma delle vendite per prodotto o la media giornaliera delle visite."
+              name="Total Gpu Sales in Each Continent"
+              version="3">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero approssimativo di chiavi Group By generate dall'aggregazione. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica più di 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore KeyScale."
+                  name="KeyScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifica il numero esatto di chiavi Group By generate dall'aggregazione. Se si specifica un valore KeyScale, il valore di Keys ha la precedenza."
+                  name="Keys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero approssimativo di valori Distinct in una colonna a cui viene applicata la funzione di aggregazione Count Distinct. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore CountDistinctScale."
+                  name="CountDistinctScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifica il numero approssimativo di valori Distinct in una colonna a cui viene applicata la funzione di aggregazione Count Distinct. Se si specifica un valore CountDistinctScale, il valore in CountDistinctKeys ha la precedenza."
+                  name="CountDistinctKeys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la percentuale di estensione della memoria consentita durante l'aggregazione. I valori validi sono compresi tra 1 e 100."
+                  name="AutoExtendFactor">25</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Attività Flusso di dati\Total Gpu Sales in Each Continent.Inputs[Input aggregazione 1]"
+                  name="Input aggregazione 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Total Gpu Sales in Each Continent.Inputs[Input aggregazione 1].Columns[continent]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="continent"
+                      lineageId="Package\Attività Flusso di dati\Join Geo 1.Outputs[Output corrispondenza ricerca].Columns[continent]" />
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Total Gpu Sales in Each Continent.Inputs[Input aggregazione 1].Columns[sales_usd]"
+                      cachedDataType="cy"
+                      cachedName="sales_usd"
+                      lineageId="Package\Attività Flusso di dati\Gpu Sales.Outputs[Output origine ODBC].Columns[sales_usd]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Attività Flusso di dati\Total Gpu Sales in Each Continent.Outputs[Output aggregazione 1]"
+                  name="Output aggregazione 1">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifica il numero approssimativo di chiavi Group By generate dall'aggregazione. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica più di 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore KeyScale."
+                      name="KeyScale"
+                      typeConverter="KeyScaleType">0</property>
+                    <property
+                      dataType="System.Null"
+                      description="Specifica il numero esatto di chiavi Group By generate dall'aggregazione. Se si specifica un valore KeyScale, il valore di Keys ha la precedenza."
+                      name="Keys" />
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Total Gpu Sales in Each Continent.Outputs[Output aggregazione 1].Columns[continent]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Attività Flusso di dati\Total Gpu Sales in Each Continent.Outputs[Output aggregazione 1].Columns[continent]"
+                      name="continent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'ID della colonna di input utilizzata nell'aggregazione."
+                          name="AggregationColumnId">#{Package\Attività Flusso di dati\Join Geo 1.Outputs[Output corrispondenza ricerca].Columns[continent]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di aggregazione."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica se la colonna richieste interventi di gestione speciali perché contiene dati di dimensioni eccessive o richiede una precisione maggiore rispetto al tipo di dati float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni per il confronto di stringhe."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Total Gpu Sales in Each Continent.Outputs[Output aggregazione 1].Columns[sales_usd]"
+                      dataType="cy"
+                      lineageId="Package\Attività Flusso di dati\Total Gpu Sales in Each Continent.Outputs[Output aggregazione 1].Columns[sales_usd]"
+                      name="sales_usd">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'ID della colonna di input utilizzata nell'aggregazione."
+                          name="AggregationColumnId">#{Package\Attività Flusso di dati\Gpu Sales.Outputs[Output origine ODBC].Columns[sales_usd]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di aggregazione."
+                          name="AggregationType"
+                          typeConverter="AggregationType">4</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica se la colonna richieste interventi di gestione speciali perché contiene dati di dimensioni eccessive o richiede una precisione maggiore rispetto al tipo di dati float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni per il confronto di stringhe."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Attività Flusso di dati\Total Ram Sales in Each Continent"
+              componentClassID="Microsoft.Aggregate"
+              contactInfo="Aggregazione;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;3"
+              description="Aggrega i dati con funzioni quali Media, Somma, Conta numeri, Max e Min. Ad esempio, raggruppare i dati per calcolare la somma delle vendite per prodotto o la media giornaliera delle visite."
+              name="Total Ram Sales in Each Continent"
+              version="3">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero approssimativo di chiavi Group By generate dall'aggregazione. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica più di 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore KeyScale."
+                  name="KeyScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifica il numero esatto di chiavi Group By generate dall'aggregazione. Se si specifica un valore KeyScale, il valore di Keys ha la precedenza."
+                  name="Keys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero approssimativo di valori Distinct in una colonna a cui viene applicata la funzione di aggregazione Count Distinct. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore CountDistinctScale."
+                  name="CountDistinctScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifica il numero approssimativo di valori Distinct in una colonna a cui viene applicata la funzione di aggregazione Count Distinct. Se si specifica un valore CountDistinctScale, il valore in CountDistinctKeys ha la precedenza."
+                  name="CountDistinctKeys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la percentuale di estensione della memoria consentita durante l'aggregazione. I valori validi sono compresi tra 1 e 100."
+                  name="AutoExtendFactor">25</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Attività Flusso di dati\Total Ram Sales in Each Continent.Inputs[Input aggregazione 1]"
+                  name="Input aggregazione 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Total Ram Sales in Each Continent.Inputs[Input aggregazione 1].Columns[continent]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="continent"
+                      lineageId="Package\Attività Flusso di dati\Join Geo.Outputs[Output corrispondenza ricerca].Columns[continent]" />
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Total Ram Sales in Each Continent.Inputs[Input aggregazione 1].Columns[sales_usd]"
+                      cachedDataType="cy"
+                      cachedName="sales_usd"
+                      lineageId="Package\Attività Flusso di dati\Ram Sales.Outputs[Output origine ODBC].Columns[sales_usd]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Attività Flusso di dati\Total Ram Sales in Each Continent.Outputs[Output aggregazione 1]"
+                  name="Output aggregazione 1">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifica il numero approssimativo di chiavi Group By generate dall'aggregazione. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica più di 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore KeyScale."
+                      name="KeyScale"
+                      typeConverter="KeyScaleType">0</property>
+                    <property
+                      dataType="System.Null"
+                      description="Specifica il numero esatto di chiavi Group By generate dall'aggregazione. Se si specifica un valore KeyScale, il valore di Keys ha la precedenza."
+                      name="Keys" />
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Total Ram Sales in Each Continent.Outputs[Output aggregazione 1].Columns[continent]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Attività Flusso di dati\Total Ram Sales in Each Continent.Outputs[Output aggregazione 1].Columns[continent]"
+                      name="continent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'ID della colonna di input utilizzata nell'aggregazione."
+                          name="AggregationColumnId">#{Package\Attività Flusso di dati\Join Geo.Outputs[Output corrispondenza ricerca].Columns[continent]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di aggregazione."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica se la colonna richieste interventi di gestione speciali perché contiene dati di dimensioni eccessive o richiede una precisione maggiore rispetto al tipo di dati float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni per il confronto di stringhe."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Total Ram Sales in Each Continent.Outputs[Output aggregazione 1].Columns[sales_usd]"
+                      dataType="cy"
+                      lineageId="Package\Attività Flusso di dati\Total Ram Sales in Each Continent.Outputs[Output aggregazione 1].Columns[sales_usd]"
+                      name="sales_usd">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'ID della colonna di input utilizzata nell'aggregazione."
+                          name="AggregationColumnId">#{Package\Attività Flusso di dati\Ram Sales.Outputs[Output origine ODBC].Columns[sales_usd]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di aggregazione."
+                          name="AggregationType"
+                          typeConverter="AggregationType">4</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica se la colonna richieste interventi di gestione speciali perché contiene dati di dimensioni eccessive o richiede una precisione maggiore rispetto al tipo di dati float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni per il confronto di stringhe."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Attività Flusso di dati.Paths[Output aggregazione 1]"
+              endId="Package\Attività Flusso di dati\Ordinamento.Inputs[Input ordinamento]"
+              name="Output aggregazione 1"
+              startId="Package\Attività Flusso di dati\Total Ram Sales in Each Continent.Outputs[Output aggregazione 1]" />
+            <path
+              refId="Package\Attività Flusso di dati.Paths[Output aggregazione 11]"
+              endId="Package\Attività Flusso di dati\Ordinamento 1.Inputs[Input ordinamento]"
+              name="Output aggregazione 1"
+              startId="Package\Attività Flusso di dati\Total Gpu Sales in Each Continent.Outputs[Output aggregazione 1]" />
+            <path
+              refId="Package\Attività Flusso di dati.Paths[Output aggregazione 12]"
+              endId="Package\Attività Flusso di dati\Ordinamento 2.Inputs[Input ordinamento]"
+              name="Output aggregazione 1"
+              startId="Package\Attività Flusso di dati\Total Cpu Sales in Each Continent.Outputs[Output aggregazione 1]" />
+            <path
+              refId="Package\Attività Flusso di dati.Paths[Output colonna derivata]"
+              endId="Package\Attività Flusso di dati\Destinazione file flat.Inputs[Input destinazione file flat]"
+              name="Output colonna derivata"
+              startId="Package\Attività Flusso di dati\Colonna derivata.Outputs[Output colonna derivata]" />
+            <path
+              refId="Package\Attività Flusso di dati.Paths[Output corrispondenza ricerca]"
+              endId="Package\Attività Flusso di dati\Total Ram Sales in Each Continent.Inputs[Input aggregazione 1]"
+              name="Output corrispondenza ricerca"
+              startId="Package\Attività Flusso di dati\Join Geo.Outputs[Output corrispondenza ricerca]" />
+            <path
+              refId="Package\Attività Flusso di dati.Paths[Output corrispondenza ricerca1]"
+              endId="Package\Attività Flusso di dati\Total Gpu Sales in Each Continent.Inputs[Input aggregazione 1]"
+              name="Output corrispondenza ricerca"
+              startId="Package\Attività Flusso di dati\Join Geo 1.Outputs[Output corrispondenza ricerca]" />
+            <path
+              refId="Package\Attività Flusso di dati.Paths[Output corrispondenza ricerca2]"
+              endId="Package\Attività Flusso di dati\Total Cpu Sales in Each Continent.Inputs[Input aggregazione 1]"
+              name="Output corrispondenza ricerca"
+              startId="Package\Attività Flusso di dati\Join Geo 1 1.Outputs[Output corrispondenza ricerca]" />
+            <path
+              refId="Package\Attività Flusso di dati.Paths[Output merge join]"
+              endId="Package\Attività Flusso di dati\Merge join 1.Inputs[Input merge join sinistro]"
+              name="Output merge join"
+              startId="Package\Attività Flusso di dati\Merge join.Outputs[Output merge join]" />
+            <path
+              refId="Package\Attività Flusso di dati.Paths[Output merge join1]"
+              endId="Package\Attività Flusso di dati\Colonna derivata.Inputs[Input colonna derivata]"
+              name="Output merge join"
+              startId="Package\Attività Flusso di dati\Merge join 1.Outputs[Output merge join]" />
+            <path
+              refId="Package\Attività Flusso di dati.Paths[Output ordinamento]"
+              endId="Package\Attività Flusso di dati\Merge join.Inputs[Input merge join sinistro]"
+              name="Output ordinamento"
+              startId="Package\Attività Flusso di dati\Ordinamento.Outputs[Output ordinamento]" />
+            <path
+              refId="Package\Attività Flusso di dati.Paths[Output ordinamento1]"
+              endId="Package\Attività Flusso di dati\Merge join.Inputs[Input merge join destro]"
+              name="Output ordinamento"
+              startId="Package\Attività Flusso di dati\Ordinamento 1.Outputs[Output ordinamento]" />
+            <path
+              refId="Package\Attività Flusso di dati.Paths[Output ordinamento2]"
+              endId="Package\Attività Flusso di dati\Merge join 1.Inputs[Input merge join destro]"
+              name="Output ordinamento"
+              startId="Package\Attività Flusso di dati\Ordinamento 2.Outputs[Output ordinamento]" />
+            <path
+              refId="Package\Attività Flusso di dati.Paths[Output origine ODBC]"
+              endId="Package\Attività Flusso di dati\Join Geo.Inputs[Input ricerca]"
+              name="Output origine ODBC"
+              startId="Package\Attività Flusso di dati\Ram Sales.Outputs[Output origine ODBC]" />
+            <path
+              refId="Package\Attività Flusso di dati.Paths[Output origine ODBC1]"
+              endId="Package\Attività Flusso di dati\Join Geo 1.Inputs[Input ricerca]"
+              name="Output origine ODBC"
+              startId="Package\Attività Flusso di dati\Gpu Sales.Outputs[Output origine ODBC]" />
+            <path
+              refId="Package\Attività Flusso di dati.Paths[Output origine ODBC2]"
+              endId="Package\Attività Flusso di dati\Join Geo 1 1.Inputs[Input ricerca]"
+              name="Output origine ODBC"
+              startId="Package\Attività Flusso di dati\Cpu Sales.Outputs[Output origine ODBC]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Questa sezione CDATA contiene le informazioni sul layout del pacchetto e include informazioni quali coordinate (x,y), larghezza e altezza.-->
+<!--Se si modifica manualmente la sezione e si commette un errore, è possibile eliminarla. -->
+<!--Sarà comunque possibile caricare manualmente il pacchetto, ma le informazioni precedenti sul layout verranno perse e gli elementi verranno nuovamente disposti nell'area di progettazione all'interno dell'apposita finestra.-->
+<Objects
+  Version="8">
+  <!--Ogni nodo seguente conterrà proprietà che non influiscono sul comportamento di runtime.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="177,42"
+          Id="Package\Attività Flusso di dati"
+          TopLeft="342.624994924292,71.157896076213" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Attività Flusso di dati">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="239,42"
+          Id="Package\Attività Flusso di dati\Total Gpu Sales in Each Continent"
+          TopLeft="728,235.333333333333" />
+        <NodeLayout
+          Size="138,43"
+          Id="Package\Attività Flusso di dati\Merge join 1"
+          TopLeft="832,552" />
+        <NodeLayout
+          Size="151,43"
+          Id="Package\Attività Flusso di dati\Ordinamento 1"
+          TopLeft="773.333333333333,315.333333333333" />
+        <NodeLayout
+          Size="131,43"
+          Id="Package\Attività Flusso di dati\Join Geo 1 1"
+          TopLeft="1082,145.333333333333" />
+        <NodeLayout
+          Size="132,43"
+          Id="Package\Attività Flusso di dati\Ram Sales"
+          TopLeft="510.833333333333,43.1666666666667" />
+        <NodeLayout
+          Size="129,43"
+          Id="Package\Attività Flusso di dati\Gpu Sales"
+          TopLeft="782.666666666667,45.3333333333333" />
+        <NodeLayout
+          Size="241,42"
+          Id="Package\Attività Flusso di dati\Total Ram Sales in Each Continent"
+          TopLeft="455.333333333333,231.333333333333" />
+        <NodeLayout
+          Size="238,42"
+          Id="Package\Attività Flusso di dati\Total Cpu Sales in Each Continent"
+          TopLeft="1020.66666666667,234" />
+        <NodeLayout
+          Size="129,43"
+          Id="Package\Attività Flusso di dati\Cpu Sales"
+          TopLeft="1079.33333333333,40" />
+        <NodeLayout
+          Size="141,43"
+          Id="Package\Attività Flusso di dati\Ordinamento"
+          TopLeft="501.333333333333,310.666666666667" />
+        <NodeLayout
+          Size="129,43"
+          Id="Package\Attività Flusso di dati\Merge join"
+          TopLeft="646,436" />
+        <NodeLayout
+          Size="123,43"
+          Id="Package\Attività Flusso di dati\Join Geo"
+          TopLeft="514,138.666666666667" />
+        <NodeLayout
+          Size="151,43"
+          Id="Package\Attività Flusso di dati\Ordinamento 2"
+          TopLeft="1071.33333333333,322" />
+        <NodeLayout
+          Size="174,42"
+          Id="Package\Attività Flusso di dati\Destinazione file flat"
+          TopLeft="590,607" />
+        <NodeLayout
+          Size="158,42"
+          Id="Package\Attività Flusso di dati\Colonna derivata"
+          TopLeft="530,534" />
+        <NodeLayout
+          Size="131,43"
+          Id="Package\Attività Flusso di dati\Join Geo 1"
+          TopLeft="786.666666666667,142" />
+        <EdgeLayout
+          Id="Package\Attività Flusso di dati.Paths[Output origine ODBC2]"
+          TopLeft="1145.83333333333,82.6666666666666">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,62.6666666666667"
+              Start="0,0"
+              End="0,55.1666666666667">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,55.1666666666667" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Attività Flusso di dati.Paths[Output origine ODBC1]"
+          TopLeft="849.833333333333,88">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,54"
+              Start="0,0"
+              End="0,46.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,46.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Attività Flusso di dati.Paths[Output origine ODBC]"
+          TopLeft="576.083333333333,85.8333333333333">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,52.8333333333334"
+              Start="0,0"
+              End="0,45.3333333333334">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,45.3333333333334" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Attività Flusso di dati.Paths[Output ordinamento2]"
+          TopLeft="1146.66666666667,364.666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-224,187.333333333333"
+              Start="0,0"
+              End="-224,179.833333333333">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,107.111747851003" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,107.111747851003"
+                    Point2="0,111.111747851003"
+                    Point3="-4,111.111747851003" />
+                  <mssgle:LineSegment
+                    End="-220,111.111747851003" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-220,111.111747851003"
+                    Point2="-224,111.111747851003"
+                    Point3="-224,115.111747851003" />
+                  <mssgle:LineSegment
+                    End="-224,179.833333333333" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Attività Flusso di dati.Paths[Output ordinamento1]"
+          TopLeft="848.666666666667,358">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-117.777777777778,78"
+              Start="0,0"
+              End="-117.777777777778,70.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,42.2281059063137" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,42.2281059063137"
+                    Point2="0,46.2281059063137"
+                    Point3="-4,46.2281059063137" />
+                  <mssgle:LineSegment
+                    End="-113.777777777778,46.2281059063137" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-113.777777777778,46.2281059063137"
+                    Point2="-117.777777777778,46.2281059063137"
+                    Point3="-117.777777777778,50.2281059063137" />
+                  <mssgle:LineSegment
+                    End="-117.777777777778,70.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Attività Flusso di dati.Paths[Output ordinamento]"
+          TopLeft="572,353.333333333333">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="138.666666666667,82.6666666666666"
+              Start="0,0"
+              End="138.666666666667,75.1666666666666">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,37.3333333333333" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,37.3333333333333"
+                    Point2="0,41.3333333333333"
+                    Point3="4,41.3333333333333" />
+                  <mssgle:LineSegment
+                    End="134.666666666667,41.3333333333333" />
+                  <mssgle:CubicBezierSegment
+                    Point1="134.666666666667,41.3333333333333"
+                    Point2="138.666666666667,41.3333333333333"
+                    Point3="138.666666666667,45.3333333333333" />
+                  <mssgle:LineSegment
+                    End="138.666666666667,75.1666666666666" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Attività Flusso di dati.Paths[Output merge join1]"
+          TopLeft="832,573.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-144,-18.5"
+              Start="0,0"
+              End="-136.5,-18.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-68,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-68,0"
+                    Point2="-72,0"
+                    Point3="-72,-4" />
+                  <mssgle:LineSegment
+                    End="-72,-14.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-72,-14.5"
+                    Point2="-72,-18.5"
+                    Point3="-76,-18.5" />
+                  <mssgle:LineSegment
+                    End="-136.5,-18.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Attività Flusso di dati.Paths[Output merge join]"
+          TopLeft="710.666666666667,478.666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="190.333333333333,73.3333333333334"
+              Start="0,0"
+              End="190.333333333333,65.8333333333334">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.6666666666667" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,32.6666666666667"
+                    Point2="0,36.6666666666667"
+                    Point3="4,36.6666666666667" />
+                  <mssgle:LineSegment
+                    End="186.333333333333,36.6666666666667" />
+                  <mssgle:CubicBezierSegment
+                    Point1="186.333333333333,36.6666666666667"
+                    Point2="190.333333333333,36.6666666666667"
+                    Point3="190.333333333333,40.6666666666667" />
+                  <mssgle:LineSegment
+                    End="190.333333333333,65.8333333333334" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Attività Flusso di dati.Paths[Output corrispondenza ricerca2]"
+          TopLeft="1143.58333333334,188.333333333333">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,45.666666666667"
+              Start="0,0"
+              End="0,38.166666666667">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.166666666667" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-66.78587890625,13.2786458333335,133.5717578125,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Attività Flusso di dati.Paths[Output corrispondenza ricerca1]"
+          TopLeft="849.833333333333,185">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,50.333333333333"
+              Start="0,0"
+              End="0,42.833333333333">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,42.833333333333" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-66.78587890625,15.6119791666665,133.5717578125,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Attività Flusso di dati.Paths[Output corrispondenza ricerca]"
+          TopLeft="575.666666666667,181.666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,49.666666666666"
+              Start="0,0"
+              End="0,42.166666666666">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,42.166666666666" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-66.78587890625,15.278645833333,133.5717578125,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Attività Flusso di dati.Paths[Output colonna derivata]"
+          TopLeft="609,576">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="68,31"
+              Start="0,0"
+              End="68,23.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,11.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,11.5"
+                    Point2="0,15.5"
+                    Point3="4,15.5" />
+                  <mssgle:LineSegment
+                    End="64,15.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="64,15.5"
+                    Point2="68,15.5"
+                    Point3="68,19.5" />
+                  <mssgle:LineSegment
+                    End="68,23.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Attività Flusso di dati.Paths[Output aggregazione 12]"
+          TopLeft="1143.25,276">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,46"
+              Start="0,0"
+              End="0,38.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Attività Flusso di dati.Paths[Output aggregazione 11]"
+          TopLeft="848.166666666667,277.333333333333">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,37.9999999999999"
+              Start="0,0"
+              End="0,30.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Attività Flusso di dati.Paths[Output aggregazione 1]"
+          TopLeft="573.833333333333,273.333333333333">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,37.333333333334"
+              Start="0,0"
+              End="0,29.833333333334">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.833333333334" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Attività Flusso di dati\Join Geo 1 1">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[group17].[Geography]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Attività Flusso di dati\Ram Sales">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Attività Flusso di dati\Gpu Sales">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Attività Flusso di dati\Cpu Sales">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Attività Flusso di dati\Join Geo">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[group17].[Geography]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Attività Flusso di dati\Join Geo 1">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[group17].[Geography]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
