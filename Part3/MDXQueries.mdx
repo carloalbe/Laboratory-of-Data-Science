@@ -1,0 +1,19 @@
+--Show the percentage increase in total sales with respect to the previous month for
+--each ram brand and each country.with member previous as ([Time].[DayMonthQuarterYear].currentMember.lag(1), [Measures].[Sales Usd])member perc as
+([Measures].[Sales Usd] - previous)/ previous ,format_string="percent"select  {[Measures].[Sales Usd],previous,perc}  on axis(0),NonEmptyCrossJoin([Ram Product].[NameBrand].[Brand],[Geography].[Country].[Country],[Time].[DayMonthQuarterYear].[Month Quarter Year])on axis(1)from [Group17HW Mart];--For each region and ram brand show the total sales in percentage with respect to
+--the total sales of the corresponding country.with member country_sales as
+([Geography].[Geography].currentmember.parent,[Ram Product].[NameBrand].currentMember.parent,[Measures].[Sales Usd]) 
+member perc as
+[Measures].[Sales Usd]/country_sales,
+format_string="percent"
+select {[Measures].[Sales Usd], country_sales, perc} on columns,
+Nonemptycrossjoin([Geography].[Country].[Country],[Geography].[Geography].[Region],[Ram Product].[NameBrand].[Brand]) on rows
+from [Group17HW Mart];--Show the ram memory types having a total sales greater than 10% of the totals
+--sales in each continent by continent and year.with member continent_sales as
+([Ram Product].[Memory Type].currentmember.parent,[Measures].[Sales Usd]) 
+member perc as
+[Measures].[Sales Usd]/continent_sales,
+format_string="percent"
+select {[Measures].[Sales Usd], continent_sales,perc} on columns,
+filter(Nonemptycrossjoin([Geography].[Continent].[Continent],[Time].[DayMonthQuarterYear].[Year],[Ram Product].[Memory Type].[Memory Type]),perc>0.1) on rows
+from [Group17HW Mart];
