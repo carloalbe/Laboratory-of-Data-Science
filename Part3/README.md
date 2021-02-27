@@ -1,5 +1,5 @@
 # Part 3
-``` mdx
+``` .mdx
 --Show the percentage increase in total sales with respect to the previous month for
 --each ram brand and each country.
 with 
